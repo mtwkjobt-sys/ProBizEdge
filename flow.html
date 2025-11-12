@@ -1,43 +1,50 @@
 <!DOCTYPE html>
 <html lang="ja">
-    <head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>レッスンの流れ - ProBiz Edge</title>
+    <meta name="description" content="ProBiz Edgeのレッスンの流れページです。効果的なビジネス英会話習得のための5つのステップをご紹介します。">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+	    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Noto+Sans+Japanese:wght@400;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="style.css">
+           <!-- ここにCSSのCDNリンクを記述します -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-     <!-- ここにCSSのCDNリンクを記述します -->
-       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    </head>
-    <body class="page-flow"> 
-        <!--ヘッダー-->
-        <header class="header">
-            <div class="header-container">
-                <div class="logo">
-                    <a href="index.html">
-                        <img src="images/logo.png" alt="ProBiz Edgeのロゴ" width="80" height="80">
-                    <!--<a href="/">ProBiz Edge</a>-->
-                </div>
+  </head>
+  <body>
+    <!--ヘッダー-->
+    <header class="header">
+      <div class="header-container">
+        <div class="logo">
+          <a href="index.html">
+          <img src="images/logo.png" alt="ProBiz Edgeのロゴ" width="80" height="80">
+          </a>
+          <!--<a href="/">ProBiz Edge</a>-->
+        </div>
+      <!--ハンバーガーメニューのボタン -->
+      <button class="menu-toggle" id="menu-toggle">
+        &#9776; 
+      </button>
+        <nav class="global-nav" id="global-nav">
+          <ul>
+            <li><a href="index.html">トップ</a></li>
+            <li><a href="features.html">特徴</a></li>
+            <li><a href="price.html">料金</a></li>
+            <li><a href="teachers.html">講師紹介</a></li>
+            <li><a href="voice.html">受講者の声</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+          </ul>
+        </nav>
 
-                <nav class="global-nav">
-                <ul>
-                    <li><a href="index.html">トップ</a></li>
-                    <li><a href="features.html">特徴</a></li>
-                    <li><a href="#pricing">料金</a></li>
-                    <li><a href="#instructors">講師紹介</a></li>
-                    <li><a href="#reviews">受講者の声</a></li>
-                    <li><a href="#faq">FAQ</a></li>
-                </ul>
-                </nav>
-            <div class="header-cta">
-                <a href="reserve.html" class="cta-button">無料体験予約</a>
-            </div>
-            </div>
-        </header>
+        <div class="header-cta">
+          <a href="reserve.html" class="cta-button">無料体験予約</a>
+        </div>
+      </div>
+    </header>
 
+    <!--メインコンテンツ-->
     <main>
 
         <section class="strategy page-hero">
@@ -106,29 +113,30 @@
             <p>あなたのビジネス課題を明確にし、最短で成果を出すための無料体験レッスンをご予約ください。</p>
             <div class="cta-buttons">
                 <a href="reserve.html" class="cta-button large">無料体験レッスンを予約する</a>
-                <a href="#pricing" class="cta-button outline">料金プランを見る</a>
+                <a href="price.html" class="cta-button outline">料金プランを見る</a>
             </div>
         </section>
 
     </main>
 
-    <footer class="footer">
+    <!--フッター-->
+     <footer class="footer">
         <div class="footer-container">
             
             <div class="footer-info">
                 <div class="logo">
-                    <a href="/">ProBiz Edge</a>
+                    <a href="index.html">ProBiz Edge</a>
                 </div>
                 <address>
                     <p>会社情報</p>
                     <p>代表電話番号：0000-11-2222</p>
                     <p>メールアドレス：xxxxxxxxxxx.co.jp</p>
-                    <p>〒000-0000 神奈川県横浜市○○区1丁目1-1</p> 
+                    <p>〒000-0000 神奈川県横浜市○○区1丁目1-1</p>
                 </address>
                 <ul class="footer-legal-links">
-                    <li><a href="/company">会社概要</a></li>
-                    <li><a href="/privacy">プライバシーポリシー</a></li>
-                    <li><a href="/terms">利用規約</a></li>
+                    <li><a href="company.html">会社概要</a></li>
+                    <li><a href="privacy.html">プライバシーポリシー</a></li>
+                    <li><a href="terms.html">利用規約</a></li>
                 </ul>
             </div>
 
@@ -137,34 +145,45 @@
                     <h4>サービス</h4>
                     <ul>
                         <li><a href="features.html">サービスの特徴</a></li>
-                        <li><a href="flow.html">レッスンの流れ</a></li> <li><a href="/curriculum">カリキュラム紹介</a></li>
-                        <li><a href="#instructors">講師紹介</a></li>
-                        <li><a href="#reviews">受講者の声</a></li>
+                        <li><a href="flow.html">レッスンの流れ</a></li>
+                        <li><a href="curriculum.html">カリキュラム紹介</a></li>
+                        <li><a href="teachers.html">講師紹介</a></li>
+                        <li><a href="voice.html">受講者の声</a></li>
                     </ul>
                 </div>
                 <div class="footer-nav-column">
                     <h4>学習プラン</h4>
                     <ul>
-                        <li><a href="#pricing">料金プラン</a></li>
-                        <li><a href="/plans">各プラン詳細・比較ページ</a></li>
-                        <li><a href="/payment">支払い方法・キャンセルポリシー</a></li>
+                        <li><a href="price.html">料金プラン</a></li>
+                        <li><a href="pricedetails.html">各プラン詳細・比較ページ</a></li>
+                        <li><a href="payment.html">支払い方法・キャンセルポリシー</a></li>
                     </ul>
                 </div>
                 <div class="footer-nav-column">
                     <h4>予約・サポート</h4>
                     <ul>
                         <li><a href="reserve.html">無料体験予約</a></li>
-                        <li><a href="#faq">FAQ（よくある質問）</a></li>
+                        <li><a href="faq.html">FAQ（よくある質問）</a></li>
                     </ul>
                 </div>
             </div>
-
         </div>
         
         <div class="copyright">
-            <small>&copy;2025 ProBiz Edge All rights reserved.</small>
+          <small>&copy;2025 ProBiz Edge All rights reserved.</small>
         </div>
     </footer>
 
-</body>
-</html>
+    <script>
+    //1.  ！JacaScript部分！　ボタン要素とメニュー要素を取得
+    const toggleButton = document.getElementById('menu-toggle');
+    const navMenu = document.getElementById('global-nav');
+
+    // 2. ボタンにクリックイベントを追加
+    toggleButton.addEventListener('click', function() {
+        // 3. navMenuに 'is-active' クラスを付け外しする
+        navMenu.classList.toggle('is-active');
+    });
+</script>
+  </body>
+  </html>

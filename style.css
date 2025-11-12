@@ -33,7 +33,7 @@ body{font-family: 'Inter', 'Noto Sans Japanese', sans-serif;line-height:1.6;colo
 
 /* Make primary headings and CTA look decent without touching other parts */
 .hero-content h1{font-size:2rem;line-height:1.2;margin-bottom:1rem}
-.hero-content p{font-size:1.05rem;margin-bottom:1.25rem;color:#333}
+.hero-content p{font-size:1.05rem;margin-bottom:1.25rem;color:#333333}
 .cta-button{display:inline-block;padding:0.8rem 1.25rem;border-radius:6px;background:#0b5fff;color:#fff;text-decoration:none}
 .cta-button.outline{background:transparent;border:2px solid #0b5fff;color:#0b5fff}
 
@@ -68,6 +68,17 @@ h1, h2, h3, h4, h5, h6 {
     color: #FFFFFF; /* 戦略セクションは白 */
 }
 
+.strategy .page-hero h1{
+    color : #FFFFFF;
+}
+.strategy{
+    text-align: center;
+}
+
+h1{
+    color: #FFFFFF; /* キービジュアルの大見出しは白 */  
+}
+
 p {
     margin: 0;
     padding: 0;
@@ -97,19 +108,30 @@ ul {
     margin-right: auto;
     padding-left: 20px;
     padding-right: 20px;
+
 }
 
 /* -- ヘッダー -- */
-.header {
-    background-color: #FFFFFF; /* カラム四角：白 */
-    border-bottom: 1px solid #EEEEEE;
-    padding: 15px 0;
-}
-
-.header-container {
+/* ヘッダーコンテナのルールをスコープ見える化し、他の .header-container の使用箇所（セクションラッパー）に影響を与えないようにする */
+.header > .header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+/* セクション内でラッパーとして使われている .header-container はブロック表示に戻す */
+.features .header-container,
+.difference .header-container,
+.strategy .header-container,
+.cta-block .header-container,
+.footer .header-container,
+.page-faq .header-container {
+    display: block;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .logo a {
@@ -234,48 +256,20 @@ ul {
 
 .hero-content h1 {
     margin-top: 0;
-    font-size: 65px;
+    font-size: 4rem;
     line-height: 1.4;
     margin-bottom: 20px;
     color: #FFFFFF; 
+    text-align: center;
 }
 
 .hero-content p {
     margin-top: 0;
-    font-size: 24px;
+    font-size: 20px;
     margin-bottom: 30px;
     color: #FFFFFF;
 }
 
-
-
-/*
-.hero {
-    background-color: #203864; 
-   
-
-    /* キービジュアル(Hero画像) 
-    background-image: url('images/hero-image.jpg');
-    background-size: cover;
-    background-position: center;
-
-    color: #FFFFFF; 
-    padding: 120px 40px;
-    text-align: center;
-}
-
-.hero h1 {
-    font-size: 40px;
-    line-height: 1.4;
-    margin-bottom: 20px;
-    color: #FFFFFF; 
-}
-
-.hero p {
-    font-size: 18px;
-    margin-bottom: 30px;
-} 
-*/
 
 /* キービジュアル内のCTAボタン（大）*/
 .cta-button.large {
@@ -301,11 +295,10 @@ ul {
     background-color: #203864; 
     color: #FFFFFF;
     max-width: 100%;
-    /*width: 100vw; /* ビューポート全幅できない！！！ */
 }
 
 h2 { /* セクションタイトル */
-    font-size: 32px;
+    font-size: 2rem;
     text-align: center;
     margin-bottom: 20px;
     color: #203864; /* メインカラー */
@@ -327,18 +320,19 @@ h2 { /* セクションタイトル */
 
 .feature-item {
     width: 31%;
-    background-color: #FFFFFF; /* カラム四角：白 */
+    background-color: #FFFFFF; 
     padding: 30px;
     border-radius: 8px;
     /* 影をつけて白背景から浮き上がらせる */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); 
+    text-align: center;
 }
 
 .feature-item h3 {
     font-size: 20px;
     margin-bottom: 15px;
     text-align: center;
-    color: #203864; /* メインカラー */
+    color: #203864; 
 }
 
 .feature-item i{
@@ -349,11 +343,12 @@ h2 { /* セクションタイトル */
 
 .feature-item p {
     font-size: 15px;
+    margin-bottom: 25px;
 }
 
 /* -- 「話せる」と「成果を出せる」の違い (Difference) -- */
 
-/* 画像を中央配置：モバイルは縦積みで中央、デスクトップは横並びで自然に並べる */
+/* 画像を中央配置：モバイルは縦積みで中央、デスクトップは横並びで並べる */
 .difference-container{
     display: flex;
     flex-direction: column; /* モバイルは縦に並べて中央寄せ */
@@ -412,10 +407,8 @@ font-size: 16;
 
 /* ===== CTAブロック ===== */
 .cta-block {
-    background-color: #F8F9FA; /* オフホワイト背景 */
+    background-color: #F8F9FA; 
     text-align: center;
-    border-top: 1px solid #EEE;
-    border-bottom: 1px solid #EEE;
 }
 
 .cta-buttons {
@@ -491,9 +484,7 @@ font-size: 16;
     color: #AAAAAA;
 }
 
-/* ======================================= */
-/* 特徴ページ (features.html) 専用の調整   */
-/* ======================================= */
+/* -- 特徴ページ (features.html) -- */
 
 /* ヒーローセクション (ネイビーの帯) */
 .page-features .page-hero {
@@ -547,9 +538,7 @@ font-size: 16;
 }
 
 
-/* ======================================= */
-/* レッスンの流れ (flow.html) 専用の調整   */
-/* ======================================= */
+/* -- レッスンの流れ (flow.html) -- */
 
 /* ヒーローセクション (ネイビーの帯) */
 .page-flow .page-hero {
@@ -560,7 +549,7 @@ font-size: 16;
 
 /* "LESSON FLOW" */
 .page-flow .page-hero h1 {
-    font-size: 18px; /* 特徴ページとデザインを統一 */
+    font-size: 42px; /* 特徴ページとデザインを統一 */
     color: #FFFFFF; /* 白文字 */
     text-transform: uppercase;
     margin-bottom: 10px;
@@ -570,7 +559,7 @@ font-size: 16;
 /* "結果をコミットする5つのステップ" */
 .page-flow .page-hero .section-subtitle {
     color: #FFFFFF;
-    font-size: 32px; /* 特徴ページとデザインを統一 */
+    font-size: 16px; /* 特徴ページとデザインを統一 */
     font-weight: 700;
     margin-bottom: 0;
 }
@@ -619,8 +608,7 @@ font-size: 16;
     line-height: 1.7; /* 行間を少し広げる */
 }
 
-/* ダミーアイコンスペース */
-/* アイコンのダミースペース (右側) */
+/* レッスンの流れアイコン */
  .flow-step-icon {
     width: 100px;
     height: 100px;
@@ -628,15 +616,10 @@ font-size: 16;
     justify-content: center;
     align-items: center;
     text-align: center;
-    /*flex-shrink: 0; /* 幅が縮まないように固定 */
-    /* border-radius: 50%; /* 円形 */
-    /*background-color: #FFC300; /* アクセントカラー */
-    
-    /* (後でこの要素を <img src=""> に差し替え) */
-} /* ダミーアイコンスペース終わり */ 
+} 
 
 
-/* === 予約フォームページ (reserve.html) 専用の調整 === */
+/* -- 予約フォームページ (reserve.html) -- */
 .reservation-form {
     max-width: 800px;
     margin: 120px auto 60px;
@@ -691,10 +674,178 @@ font-size: 16;
     background: #ffc800;
 }
 
-/* レスポンシブ対応 */
-@media (max-width: 768px) {
-    .reservation-form {
-        margin: 80px 20px;
-        padding: 20px;
+/* 料金ページhero文字 */
+.page-pricing .page-hero h1 {
+    color: #FFFFFF;
+    text-align: center; /* 白文字 */
+}
+
+.page-pricing .page-hero .section-subtitle {
+    color: #FFFFFF;
+}
+
+/* "FAQ" さっき追加した*/
+.page-flow .page-hero h1 {
+    font-size: 42px; /* 特徴ページとデザインを統一 */
+    color: #FFFFFF; /* 白文字 */
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+
+
+/* -- レスポンシブ対応 -- */
+/* 最初にスマートフォンなど小さい画面向けのスタイルを定義 (モバイルファースト) */
+.container {
+  width: 100%;
+  padding: 10px;
+}
+
+/* 画面幅が768px以上になったら、このスタイルを適用する (タブレットとか)*/
+@media screen and (min-width: 768px) {
+  .container {
+    width: 700px;
+    padding: 20px;
+  }
+}
+
+/* 画面幅が1200px以上になったら、さらにこのスタイルを適用する */
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1100px;
+    margin: 0 auto;
+  }
+}
+
+.features-container, .features-container.pricing-container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 5px;
+}
+
+.features-item, .feature-item.pricing-item{
+    width: 100%;
+    padding: 30px 15px;
+}
+
+.feature-item, .feature-item.pricing-item{
+   /* padding: 4.8rem 2.5rem;*/
+    width: 100%;
+    max-width: 79.9rem;
+    margin: 0 auto;
+}
+/* 画面幅が768px以上になったら、このスタイルを適用する */
+@media screen and (min-width: 768px) {
+    .features-container, .features-container.pricing-container{
+        flex-direction: row;
     }
+    .features-item, .feature-item.pricing-item{
+        width: 31%;
+    }
+}
+
+/* ヘッダー全体のスタイル調整 */
+.header-container {
+    display: flex;
+    justify-content: space-between; /* ロゴとメニューを両端に寄せる */
+    align-items: center; /* 要素を垂直方向の中央に揃える */
+    padding: 10px 15px; /* 適切な余白 */
+    background-color: #F8F9FA; /* オフホワイトに設定 */
+    width: 100%;
+    box-sizing: border-box; /* paddingをwidthに含める */
+}
+/* ナビゲーションメニューをモバイルで非表示にする */
+.global-nav {
+    /* 画面が狭いときは非表示にする */
+    display: none; 
+    /* 必要に応じて、ハンバーガーメニューが表示された時のスタイルも設定 */
+}
+
+/* 画面が広いときでナビゲーションを再表示 */
+@media screen and (min-width: 768px) {
+    .global-nav {
+        display: block; /* PC表示では横並びに戻す */
+    }
+    .global-nav ul {
+        display: flex; /* メニュー項目を横並びに */
+        list-style: none;
+        padding: 0;
+    }
+    .global-nav li {
+        margin-left: 25px;
+        /* メニュー項目の間の余白 */
+    }
+}
+
+/* ====ハンバーガーメニューのスタイル ====*/
+/* --- モバイル向け --- */
+/* ハンバーガーボタンはモバイルで表示 */
+.menu-toggle {
+    display: block; 
+    background: none;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* navメニューをトグルで表示させるためのスタイル */
+.global-nav {
+    display: none; 
+    position: absolute;
+    top: 60px; /* ヘッダーの高さに合わせて調整 */
+    left: 0;
+    width: 100%;
+    background-color: #f8f9fa;
+}
+/* JavaScriptで付与されるクラス。メニューを表示する */
+.global-nav.is-active {
+    display: block; 
+}
+
+
+/* --- PC向け --- */
+@media screen and (min-width: 768px) {
+    /*PCではハンバーガーボタンを非表示 */
+    .menu-toggle {
+        display: none; 
+    }
+    /* PCではメニューを常に横並びで表示 */
+    .global-nav {
+        display: block !important;
+        position: static;
+        width: auto;
+    }
+    .global-nav ul {
+        display: flex;
+    }
+}
+
+/* ===== 制作中メッセージ ===== */
+.construction-message {
+    text-align: center;
+    font-size: 24px; 
+    font-weight: bold;
+    color: #203864; 
+    padding: 20px;
+    border: 1px solid #ccc; 
+    background-color: #f9f9f9;
+    margin: 0 auto;
+}
+
+.construction-page{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+    flex-grow: 1;
+}
+.construction-image {
+    display: block;
+    margin: 20px auto 0 auto;
+    max-width: 300px;
+    width: 100%;
+    height: auto;
 }
