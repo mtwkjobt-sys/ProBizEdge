@@ -1,13 +1,13 @@
-/* style.css - minimal styles to center hero content and basic resets */
+/* ヒーローコンテンツを中央に配置し、基本的なリセットを行う*/
 /* Reset */
 *{box-sizing:border-box;margin:0;padding:0}
 html,body{height:100%}
-body{font-family: 'Inter', 'Noto Sans Japanese', sans-serif;line-height:1.6;color:#111;background:#fff}
+body{font-family: 'Inter', 'Noto Sans Japanese', sans-serif;line-height:1.6;color:#333333;background:#fff}
 
-/* Header spacing (adjust if your header height differs) */
+/* ヘッダーの間隔 */
 .header{width:100%;z-index:10}
 
-/* Hero section: center .hero-content both vertically and horizontally */
+/* ヒーローセクション: .hero-content を垂直方向と水平方向の両方で中央に配置する */
 .hero-section{
   display:flex;
   align-items:center;
@@ -31,19 +31,21 @@ body{font-family: 'Inter', 'Noto Sans Japanese', sans-serif;line-height:1.6;colo
   padding:1rem;
 }
 
-/* Make primary headings and CTA look decent without touching other parts */
+/* 他の部分に影響を与えずに、主要な見出しとCTAの見栄えを整える*/
 .hero-content h1{font-size:2rem;line-height:1.2;margin-bottom:1rem}
 .hero-content p{font-size:1.05rem;margin-bottom:1.25rem;color:#333333}
 .cta-button{display:inline-block;padding:0.8rem 1.25rem;border-radius:6px;background:#0b5fff;color:#fff;text-decoration:none}
 .cta-button.outline{background:transparent;border:2px solid #0b5fff;color:#0b5fff}
 
-/* Responsive tweaks */
+/* レスポンシブの調整 */
 @media (min-width:768px){
   .hero-content h1{font-size:2.6rem}
 }
 
-/* Small utility */
+/* 小規模ユーティリティ*/
 .large{padding:1rem 1.5rem;font-size:1.05rem}
+
+
 /*-- 基本設定 --*/
 body {
     margin: 0;
@@ -65,7 +67,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .strategy h2, .strategy p{
-    color: #FFFFFF; /* 戦略セクションは白 */
+    color: #FFFFFF; /* カードセクションは白 */
 }
 
 .strategy .page-hero h1{
@@ -96,7 +98,7 @@ ul {
 
 }
 
-/* ページ全体の横幅を制限するコンテナ */
+/* ページ全体の横幅を制限するコンテナの調整 */
 .header-container,
 .features,
 .difference,
@@ -225,7 +227,7 @@ ul {
     align-items: center;
     overflow: hidden; 
 }
-/* 1. ネイビーの半透明オーバーレイ */
+/* 1. 濃いネイビーの半透明オーバーレイ */
 .hero-overlay {
     position: absolute; 
     top: 0;
@@ -287,7 +289,7 @@ ul {
     padding-bottom: 80px;
     /* 各セクションの背景をオフホワイトに */
     background-color: #F8F9FA;
-    /* セクション間に余白を これいらない？*/
+    /* セクション間に余白を←これいらない？*/
     margin-bottom: 80px; 
 }
 
@@ -356,7 +358,6 @@ h2 { /* セクションタイトル */
     justify-content: center;
     /* gap: 40px; これいらないかも*/
 }
-/* 常に縦並び（テキスト → 画像 → 補足テキスト）にするため、横並びの切替は不要 */
 
 .difference-text {
     text-align: center;
@@ -399,9 +400,9 @@ font-size: 16;
 
 /* ===== 5ステップの学習戦略 (Strategy) ===== */
 .strategy-cta {
-    background-color: #203864; /* メインカラー背景 */
+    background-color: #203864; 
     text-align: center;
-    margin-top: 40px; /* (仮の余白) */
+    margin-top: 40px; /* (仮余白) */
 }
 
 
@@ -629,9 +630,6 @@ font-size: 16;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
 }
 
-
-
-
 .reservation-form h2 {
     font-size: 2rem;
     color: #203864;
@@ -751,8 +749,8 @@ font-size: 16;
     display: flex;
     justify-content: space-between; /* ロゴとメニューを両端に寄せる */
     align-items: center; /* 要素を垂直方向の中央に揃える */
-    padding: 10px 15px; /* 適切な余白 */
-    background-color: #F8F9FA; /* オフホワイトに設定 */
+    padding: 10px 15px; 
+    background-color: #F8F9FA; 
     width: 100%;
     box-sizing: border-box; /* paddingをwidthに含める */
 }
@@ -763,7 +761,7 @@ font-size: 16;
     /* 必要に応じて、ハンバーガーメニューが表示された時のスタイルも設定 */
 }
 
-/* 画面が広いときでナビゲーションを再表示 */
+/* 画面が広いときでナビゲーションを再表示できるようにする */
 @media screen and (min-width: 768px) {
     .global-nav {
         display: block; /* PC表示では横並びに戻す */
@@ -790,7 +788,7 @@ font-size: 16;
     cursor: pointer;
 }
 
-/* navメニューをトグルで表示させるためのスタイル */
+/* navメニューをトグル(オンオフ)で表示させるためのスタイル */
 .global-nav {
     display: none; 
     position: absolute;
